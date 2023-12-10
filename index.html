@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    html {
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+    .drawing-canvas {
+      position: relative;
+      cursor: cell;
+      width: 280px;
+      height: 280px;
+    }
+
+    .drawing-col {
+      display: flex;
+      justify-content: right;
+    }
+
+    .wrap {
+      position: relative;
+    }
+
+    th,
+    td {
+      font-family: monospace;
+      width: 28px;
+      height: 28px;
+    }
+
+    td {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-4 text-center">
+    <h2>Number recognition</h2>
+    <div class="row mt-4">
+      <div class="col drawing-col">
+        <div>
+          <span>28x28px</span>
+          <div class="wrap">
+            <canvas class="drawing-canvas" id="draw"></canvas>
+          </div>
+          <button class="btn btn-light mt-2" id="clear">clear</button>
+        </div>
+      </div>
+      <div class="col">
+        <table class="mt-4" id="result-table">
+          <tr>
+            <th>0</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>9</th>
+            <td>0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
