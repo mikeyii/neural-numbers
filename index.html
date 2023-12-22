@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <style>
     html {
-      overflow: hidden;
       overscroll-behavior: none;
     }
     body {
       color: #333;
-      font-family: sans-serif;
+      font-family: monospace;
+    }
+    .container {
+      max-width: 374px;
     }
     .drawing-canvas {
       position: relative;
@@ -40,7 +42,6 @@
       max-width: 350px;
       margin: 0 auto!important;
       font-size: 12px;
-      font-family: monospace;
     }
 
     .table th {
@@ -49,9 +50,8 @@
 
     .small {
       font-size: 12px;
-      color: #aaa;
+      color: #999;
       font-weight: bold;
-      font-family: monospace;
     }
     @media screen and (max-width: 450px) {
       .container {
@@ -64,8 +64,8 @@
 <body>
   <div class="container mt-4 text-center">
     <h2>Number recognition</h2>
-    <span class="small">28x28px</span>
-    <div class="table-wrap mt-4">
+    
+    <div class="table-wrap mt-2">
       <table class="table" id="result-table">
         <tr>
           <th>0</th>
@@ -94,14 +94,20 @@
       </table>
     </div>
     <div class="mt-4">
+      <small class="text-muted">Draw a number here ↓</small>
       <div class="wrap">
-        <canvas class="drawing-canvas" id="draw"></canvas>
+        <canvas class="drawing-canvas" id="draw" title="Start drawing a number"></canvas>
       </div>
       <div>
-        <button class="btn btn-light mt-2" id="clear">clear</button>
+        <button class="btn btn-light mt-2" id="clear">Clear</button>
       </div>
-      
     </div>
+    <h5 class="mt-4 text-muted">Dataset examples</h5>
+    <img src="MnistExamplesModified.png" alt="Mnist Examples" title="Mnist Examples" width="350">
+    <footer class="my-4 text-muted">
+      <small>By <a href="https://github.com/mikeyii/">@mikeyii</a><br>
+      Contact email: <a href="mailto:yii.web@yandex.ru">yii.web@yandex.ru</a></small>
+    </footer>
   </div>
   <script src="bundle.js"></script>
 </body>
